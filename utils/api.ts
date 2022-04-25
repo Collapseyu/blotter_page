@@ -167,7 +167,7 @@ export const tagsSearch = async (
   keyword: string,
   callback?: RequestCallback<{ total: number; tags: Blotter.Tag[] }>,
 ) => {
-  return await request('get', '/api/tags', { keyword, number: 10, offset: 0 }, callback);
+  return await request('get', '/api/tags', { keyword, number: 10, offset: 0 ,all:true}, callback);
 };
 
 export const login = async (
